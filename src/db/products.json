@@ -1,0 +1,29 @@
+[
+  {
+    "title": "Producto",
+    "description": "Descripcion del Producto",
+    "price": 420,
+    "thumbnail": "producto.jpg",
+    "code": "Hv1Kv2PzK",
+    "stock": 17,
+    "id": 1
+  },
+  {
+    "title": "Producto2",
+    "description": "Descripcion del Producto2",
+    "price": 8320,
+    "thumbnail": "producto2.jpg",
+    "code": "Z8uIlzc",
+    "stock": 19,
+    "id": 2
+  },
+  {
+    "title": "Producto3",
+    "description": "Descripcion del Producto3",
+    "price": 560,
+    "thumbnail": "producto3.jpg",
+    "code": "Hov3vv2PzK",
+    "stock": 22,
+    "id": 3
+  }
+]
