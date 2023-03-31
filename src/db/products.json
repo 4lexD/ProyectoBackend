@@ -25,5 +25,14 @@
     "code": "Hov3vv2PzK",
     "stock": 22,
     "id": 3
+  },
+  {
+    "title": "Producto4",
+    "description": "Descripcion del Producto4",
+    "price": 330,
+    "thumbnail": "producto4.jpg",
+    "code": "Hv1Kv2vxzK",
+    "stock": 37,
+    "id": 4
   }
 ]
