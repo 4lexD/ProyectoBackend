@@ -33,15 +33,18 @@ class ProductManager{
                 if(productos.length>0){
                     const id = productos[productos.length-1].id+1
                     product.id = id 
+                    product.status = true 
                     productos.push(product)
                     await fs.promises.writeFile(this._path,JSON.stringify(productos,null,2))
                 }else{
                     product.id=1
+                    product.status = true 
                     await fs.promises.writeFile(this._path,JSON.stringify([product],null,2))
                 }
             }
             else{
                 product.id=1
+                product.status = true 
                 await fs.promises.writeFile(this._path,JSON.stringify([product],null,2))
             }
 

@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Guitarra Strandberg",
+    "description": "Guitarra eléctrica de 6 cuerdas con diseño ergonómico Strandberg",
+    "price": 1599.99,
+    "thumbnail": "https://www.example.com/guitarra-strandberg.jpg",
+    "code": "GTR-STRND-001",
+    "stock": 10,
+    "id": 1,
+    "status": true
+  },
+  {
+    "title": "Bajo Fender Precision Bass",
+    "description": "Bajo eléctrico de la legendaria marca Fender, modelo Precision Bass, color negro",
+    "price": 1299.99,
+    "thumbnail": "https://www.example.com/guitarra-strandberg.jpg",
+    "code": "FEN-PB-BLK",
+    "stock": 12,
+    "id": 2,
+    "status": true
+  },
+  {
+    "title": "Gibson Les Paul Standard",
+    "description": "La Les Paul Standard es uno de los modelos más emblemáticos de la marca Gibson. Con cuerpo de caoba y tapa de arce, dos pastillas Humbucker y un sonido cálido y potente, es una guitarra perfecta para rock y blues.",
+    "price": 2199.99,
+    "thumbnail": "https://www.example.com/example.jpg",
+    "code": "LPSTD2022",
+    "stock": 10,
+    "id": 3,
+    "status": true
+  }
+]
