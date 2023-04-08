@@ -2,7 +2,7 @@ import { Router } from 'express'
 import CartManager from '../controller/CartManager.js'
 
 const cartRouter = Router();
-const cm = new CartManager("./models/carts.json");
+const cm = new CartManager("./db/carts.json");
 
 cartRouter.get('/:id', async (req, res) => {
   try {
