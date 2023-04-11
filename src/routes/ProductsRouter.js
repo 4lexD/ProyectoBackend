@@ -1,8 +1,10 @@
 import { Router } from 'express';
 import ProductManager from '../controller/ProductManager.js';
+import socketServer from '../app.js';
+
 
 const productsRouter = Router();
-const pm = new ProductManager('./db/products.json');
+const pm = new ProductManager('./src/db/products.json');
 
 productsRouter.get('/', async (req, res) => {
   try {
@@ -35,7 +37,7 @@ productsRouter.post('/', async (req, res) => {
     const product = { title, description, price, thumbnail, code, stock };
 
     const addproduct = await pm.addProducts(product);
-
+    socketServer.emit('productCreated',product);
     res.status(201).json(product);
   } catch (error) {
     res.status(500).send('Internal Server Error');
@@ -61,7 +63,7 @@ productsRouter.delete('/:id', async (req, res) => {
   try {
     let id = +req.params.id;
     const deleteProduct = await pm.deleteProduct(id);
-
+    socketServer.emit('productRemoved', id);
     res.status(204);
   } catch (error) {
     res.status(500).send('Internal Server Error');

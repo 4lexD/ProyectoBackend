@@ -1,0 +1,52 @@
+<div class="container">
+    <h1> realtime prouducts </h1>
+    <table id="table" class="table table-striped">
+        <tr>
+            <td>titulo</td>
+            <td>descripcion</td>
+            <td>precio</td>
+            <td>imagen</td>
+            <td>code</td>
+            <td>stock</td>
+            <td>id</td>
+            <td>status</td>
+        </tr>
+        {{#each products}}
+            <tr>
+                <td>{{title}}</td>
+                <td>{{description}}</td>
+                <td>{{price}}</td>
+                <td>{{thumbnail}}</td>
+                <td>{{code}}</td>
+                <td>{{stock}}</td>
+                <td>{{id}}</td>
+                <td>{{status}}</td>
+            </tr>
+        {{/each}}        
+    </table>
+
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.6.1/socket.io.js"></script>
+<script>
+    const socket = io();
+    socket.on('productCreated', product => {
+        const row = `
+            <tr id="table-${product.id}">
+              <td>${product.title}</td>
+              <td>${product.description}</td>
+              <td>${product.price}</td>
+              <td>${product.thumbnail}</td>
+              <td>${product.code}</td>
+              <td>${product.stock}</td>
+              <td>${product.id}</td>
+              <td>${product.status}</td>
+            </tr>
+          `;
+        document.querySelector('#table').insertAdjacentHTML("beforeend", row);
+    });
+    socket.on('productRemoved', id => {
+        const productElement = document.querySelector(`#table-${id}`);
+        if (productElement) productElement.remove();
+    });
+    
+</script>
